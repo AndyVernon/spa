@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
+    BrowserRouter,
     Route,
     NavLink,
-    HashRouter
-} from 'react-router-dom';
+    Routes} from 'react-router-dom';
 
 import Home from './React/Pages/Home/Home';
 import Stuff from './React/Pages/Stuff/Stuff';
@@ -12,7 +12,7 @@ import Contact from './React/Pages/Contact/Contact';
 class Main extends Component {
     render() {
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <div>
                     <h1>Simple SPA</h1>
                     <ul className='header'>
@@ -21,12 +21,14 @@ class Main extends Component {
                         <li><NavLink to='/contact'>Contact</NavLink></li>
                     </ul>
                     <div className='content'>
-                        <Route path='/' component={Home} />
-                        <Route path='/stuff' component={Stuff} />
-                        <Route path='/contact' component={Contact} />
+                        <Routes>
+                            <Route exact path='/' element={<Home />} />
+                            <Route path='/stuff' element={<Stuff />} />
+                            <Route path='/contact' element={<Contact />} />
+                        </Routes>
                     </div>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }

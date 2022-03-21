@@ -1,36 +1,39 @@
-import React, { Component } from 'react';
 import {
     BrowserRouter,
     Route,
     NavLink,
-    Routes} from 'react-router-dom';
+    Routes
+} from 'react-router-dom';
+import BemIt from '@gtechdoodler/bem-it';
 
-import Home from './React/Pages/Home/Home';
-import Stuff from './React/Pages/Stuff/Stuff';
-import Contact from './React/Pages/Contact/Contact';
+import Home from './React/Pages/Home';
+import Stuff from './React/Pages/Stuff';
+import Contact from './React/Pages/Contact';
 
-class Main extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <div>
-                    <h1>Simple SPA</h1>
-                    <ul className='header'>
-                        <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/stuff'>Stuff</NavLink></li>
-                        <li><NavLink to='/contact'>Contact</NavLink></li>
-                    </ul>
-                    <div className='content'>
-                        <Routes>
-                            <Route exact path='/' element={<Home />} />
-                            <Route path='/stuff' element={<Stuff />} />
-                            <Route path='/contact' element={<Contact />} />
-                        </Routes>
-                    </div>
+import './Main.scss';
+
+function Main() {
+    const bem = new BemIt('Main');
+
+    return (
+        <BrowserRouter>
+            <div className={bem.out}>
+                <h1>Simple SPA</h1>
+                <ul className={bem.el('list').out}>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/stuff'>Stuff</NavLink></li>
+                    <li><NavLink to='/contact'>Contact</NavLink></li>
+                </ul>
+                <div className='content'>
+                    <Routes>
+                        <Route exact path='/' element={<Home />} />
+                        <Route path='/stuff' element={<Stuff />} />
+                        <Route path='/contact' element={<Contact />} />
+                    </Routes>
                 </div>
-            </BrowserRouter>
-        );
-    }
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default Main;

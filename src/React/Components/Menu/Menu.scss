@@ -1,26 +1,5 @@
-body {
-    background-color: #ffcc00;
-    padding: 20px;
-    margin: 0;
-}
-
-.Main {
-
-    background-color: #fff;
-    padding: 20px;
-
-    h1, h2, p, ul, li {
-        font-family: sans-serif;
-    }
-
-    h2 {
-        padding: 0;
-        margin: 0;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
+.Menu {
+    background-color: #ff9900;
 
     &__list {
         background-color: #111;

@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom';
 import BemIt from '@gtechdoodler/bem-it';
 
-import Home from './React/Pages/Home/Home';
-import Stuff from './React/Pages/Stuff/Stuff';
+import Home from './React/Pages/Home';
+import Stuff from './React/Pages/Stuff';
 import Contact from './React/Pages/Contact';
 
 import './Main.scss';

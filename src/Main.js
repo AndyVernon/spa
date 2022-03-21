@@ -8,7 +8,7 @@ import BemIt from '@gtechdoodler/bem-it';
 
 import Home from './React/Pages/Home/Home';
 import Stuff from './React/Pages/Stuff/Stuff';
-import Contact from './React/Pages/Contact/Contact';
+import Contact from './React/Pages/Contact';
 
 import './Main.scss';
 

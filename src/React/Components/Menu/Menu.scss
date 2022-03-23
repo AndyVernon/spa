@@ -1,0 +1,26 @@
+.Menu {
+    background-color: #ff9900;
+
+    &__list {
+        background-color: #111;
+        padding: 0;
+
+        .active {
+            background-color: #0099ff;
+        }
+
+        li {
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+
+            a {
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 20px;
+                display: inline-block;
+            }
+        }
+    }
+}
